@@ -11,6 +11,8 @@ def test():
         assert(str(e) == "negatives not supported -1, -2")
 
     assert(add("1001,5") == 5)
+    #Put below test in a try/except so that we throw an error message if/when it fails. 
+    #To check that the message is correct and contains all the negatives that were entered.
     try:
         add("-1001,-2")
     except ValueError as e:
