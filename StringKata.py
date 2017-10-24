@@ -1,3 +1,4 @@
+#Function to run the test cases for each senario
 def test():
     assert(add("") == 0)
     assert(add("5") == 5)
@@ -24,7 +25,7 @@ def test():
     print("all tests passed")
 
 
-
+#Function to add a number
 def add(numberString):
     if len(numberString) == 0: return 0
     else:
@@ -34,7 +35,7 @@ def add(numberString):
         numbers = split(delims,numberString)
         return sum(numbers)
 
-
+#Get the deliminators
 def getDelims(numberString):
     delims = []
     length = 0
@@ -65,7 +66,7 @@ def getDelims(numberString):
     return [delims,numberString]
 
 
-
+#Split the string at each of the deliminators
 def split(delims,numberString):
     numbers = numberString.split('\n')
     for delim in delims:
@@ -76,7 +77,7 @@ def split(delims,numberString):
 
     return numbers
 
-
+#Sum up the numbers
 def sum(numbers):
     total = 0
     negatives = []
@@ -94,5 +95,5 @@ def sum(numbers):
 
 
 
-
+#Run the tests
 test()
